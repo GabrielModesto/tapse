@@ -1,5 +1,5 @@
 import streamlit as st
-import pyautogui
+
 
 st.set_page_config(page_title="Relación TAPSE/sPAP")
 
@@ -42,12 +42,7 @@ else:
 primary_clr = st.get_option("theme.primaryColor")
 txt_clr = st.get_option("theme.textColor")
     
-      
-col1, col2, col3 = st.columns(3) 
-with col1:st.write(' ') 
-if st.button('Reiniciar'):
-     pyautogui.hotkey('f5') #Simulates F5 key press = page refresh
-with col3:st.write(' ')
+
     
     
     
