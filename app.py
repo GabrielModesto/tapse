@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import pyautogui
 
 
 st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":")
@@ -60,7 +59,7 @@ elements[0].style.backgroundColor = 'lightblue'
 col1, col2 = st.columns(2) 
 with col1:st.write(' ') 
 if st.button('Reiniciar'):
-  pyautogui.hotkey('f5')
+
   with col2:st.write(' ')
   
   
