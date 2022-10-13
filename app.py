@@ -1,7 +1,11 @@
 import streamlit as st
+import streamlit.components.v1 as components
+import pyautogui
 
 
-st.set_page_config(page_title="Relación TAPSE/sPAP")
+st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":")
+
+# st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":", layout="wide" )
 
 # hide_default_format = """
 #        <style>
@@ -25,12 +29,11 @@ st.warning('Valor pronóstico de la relación ecocardiográfica de excursión si
 
 
 tapse= st.selectbox('TAPSE/sPAP >0.33 mm/mmHg',("Escoja valor", "Si", "No"), key = "1")
-   
- 
+    
 nyha = st.selectbox("NYHA I-II", ("Escoja valor","Si", "No"), key = "2")
     
-
 bnp = st.selectbox("NTproBNP <300 ng/L o BNP <50 ng/L", ("Escoja valor","Si", "No"), key = "3")
+
 
 if tapse=="Escoja valor" and nyha=="Escoja valor" and bnp=="Escoja valor":
     pass
@@ -41,8 +44,28 @@ else:
     
 primary_clr = st.get_option("theme.primaryColor")
 txt_clr = st.get_option("theme.textColor")
-    
 
+components.html(
+    """
+<script>
+const elements = window.parent.document.querySelectorAll('.stButton button')
+elements[0].style.backgroundColor = 'lightblue'
+</script>
+""",
+    height=0,
+    width=0,
+)
+    
+      
+col1, col2 = st.columns(2) 
+with col1:st.write(' ') 
+if st.button('Reiniciar'):
+  pyautogui.hotkey('f5')
+  with col2:st.write(' ')
+  
+  
+st.write("[Ampliar información](https://www.sciencedirect.com/science/article/abs/pii/S1053249822021143)")
+    
     
     
     
