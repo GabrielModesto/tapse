@@ -4,15 +4,14 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":")
 
- #st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":", layout="wide" )
+# st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":", layout="wide" )
 
- #hide_default_format = """
-        # <style>
-       #   MainMenu {visibility: hidden; }
-       #  footer {visibility: hidden;}
-       #  </style>
-     #    """
- # st.markdown(hide_default_format, unsafe_allow_html=True)
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align: center; color: blue;'>Relación TAPSE/sPSP</h2>", unsafe_allow_html=True)
 
@@ -73,6 +72,11 @@ elements[0].style.backgroundColor = 'lightblue'
 col1, col2 = st.columns(2) 
 with col1:st.write(' ') 
 
+
+  
+
+
+
 # if st.button("Reset"):
   
   
@@ -82,7 +86,6 @@ with col1:st.write(' ')
     
 
 
-    
     
     
     
