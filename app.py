@@ -6,7 +6,7 @@ st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":")
 
 # st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":", layout="wide" )
 
-   hide_default_format = """
+ hide_default_format = """
          <style>
           MainMenu {visibility: hidden; }
          footer {visibility: hidden;}
