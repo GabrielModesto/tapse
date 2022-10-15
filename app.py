@@ -4,7 +4,7 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":")
 
-# st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":", layout="wide" )
+ st.set_page_config(page_title="Relación TAPSE/sPAP",  page_icon=":", layout="wide" )
 
  #hide_default_format = """
         # <style>
